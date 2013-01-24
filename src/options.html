@@ -34,11 +34,14 @@
 							<label class="cb-disable selected"><span>{off}</span></label>
 							<label for="disableNotificationsWhenInFocus" class="description">{disableNotificationsWhenInFocus}</label>
 						</p>
-						<p class="field switch" id="filterNotifications">
+						<p class="field switch" id="filterNotifications" data-dependents="#filterKeywordsDiv">
 							<label class="cb-enable"><span>{on}</span></label>
 							<label class="cb-disable selected"><span>{off}</span></label>
 							<label for="filterNotifications" class="description">{filterNotifications}</label>
 						</p>
+						<div class="field" id="filterKeywordsDiv">
+							<input type="text" id="filterKeywords" />
+						</div>
 						<p class="field switch" id="htmlNotifications">
 							<label class="cb-enable"><span>{on}</span></label>
 							<label class="cb-disable selected"><span>{off}</span></label>
@@ -82,11 +85,14 @@
 							<label class="cb-disable selected"><span>{off}</span></label>
 							<label for="timeStamps" class="description">{timeStamps}</label>
 						</p>
-						<p class="field switch" id="highlightName">
+						<p class="field switch" id="highlightName" data-dependents="#highlightKeywords">
 							<label class="cb-enable"><span>{on}</span></label>
 							<label class="cb-disable selected"><span>{off}</span></label>
 							<label for="highlightName" class="description">{highlightName}</label>
 						</p>
+						<div class="field" id="highlightKeywordsDiv">
+							<input type="text" id="highlightKeywords" />
+						</div>
 						<p class="field switch" id="showAvatarsInChat" data-dependents="#useLargeAvatars">
 							<label class="cb-enable"><span>{on}</span></label>
 							<label class="cb-disable selected"><span>{off}</span></label>

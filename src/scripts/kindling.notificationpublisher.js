@@ -18,8 +18,9 @@ kindling.module(function () {
 				}
 			}
 
+			// TODO: check for empty key words
 			if (options.filterNotifications === 'true') {
-				var regex = kindling.getUsernameRegex(username);
+				var regex = kindling.getKeywordsRegex(options.filterKeywords);
 				if (!regex.test($body.html())) {
 					return;
 				}

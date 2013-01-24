@@ -11,7 +11,7 @@
 	float: left;
 }
 .cb-enable > span, .cb-disable > span {
-	line-height: 30px; 
+	line-height: 30px;
 	display: block;
 	background-repeat: no-repeat;
 	font-weight: bold;
@@ -22,7 +22,7 @@
 .cb-enable > span {
 	background-position: left -90px;
 }
-.cb-disable > span { 
+.cb-disable > span {
 	background-position: right -180px;
 }
 .cb-disable.selected {
@@ -175,3 +175,10 @@
  .coda-nav ul > li:first-child > a.current {
 	border-left-width: 0;
  }
+input[type=text] {
+	margin-left: 90px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	font-size: 14pt;
+	width: 260px;
+}

@@ -13,8 +13,9 @@ kindling.module(function () {
 			var highlightOptions = { className: 'nameHighlight', tagType: 'mark' };
 			$messages.highlightRegex(undefined, highlightOptions);
 
+			// TODO: check for empty key words
 			if (options.highlightName === 'true') {
-				$messages.highlightRegex(kindling.getUsernameRegex(username), highlightOptions);
+				$messages.highlightRegex(kindling.getKeywordsRegex(options.highlightKeywords), highlightOptions);
 			}
 		} catch (err) {
 		} finally {

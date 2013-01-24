@@ -12,6 +12,16 @@ var kindling = kindling || (function (domReady) {
 			return new RegExp('\\b(' + escapedUsername + '|' + escapedUsername.split(' ').join('|') + ')\\b', 'i');
 		},
 
+		getKeywordsRegex: function (keywords) {
+			var escaped = [];
+			var list = keywords.split(/\s*,\s*/);
+			for (var i = 0; i < list.length; i++) {
+				var escapedKeyword = regExpEscape(list[i].replace(/^\s+|\s+$/g, ''));
+				escaped.push(escapedKeyword);
+			}
+			return new RegExp('\\b(' + escaped.join('|') + ')\\b', 'i');
+		},
+
 		getDomain: function (url) {
 			var regex = new RegExp('(chrome-extension|https?):\/\/(.[^/]+)');
 			var match = url.match(regex);
@@ -28,7 +38,7 @@ var kindling = kindling || (function (domReady) {
 			var max = document.documentElement.scrollHeight;
 
 			if (force === true || offset + (chatHeight * 0.1) >= max) {
-			window.scrollTo(0, targetY);
+				window.scrollTo(0, targetY);
 			}
 		},
 

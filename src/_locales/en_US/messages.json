@@ -18,7 +18,7 @@
 		"message": "Disable when tab has focus"
 	},
 	"filterNotifications":{
-		"message": "Only display when my name is mentioned"
+		"message": "Only display when key words are mentioned"
 	},
 	"showAvatarsInNotifications":{
 		"message": "Display avatars in notifications"
@@ -51,7 +51,7 @@
 		"message": "Misc."
 	},
 	"highlightName":{
-		"message": "Highlight my name"
+		"message": "Highlight key words"
 	},
 	"soundAndEmojiMenus":{
 		"message": "Emoji and sound menus"

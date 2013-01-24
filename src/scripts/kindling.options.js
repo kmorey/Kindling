@@ -94,6 +94,9 @@ kindling.module(function () {
 
 		$('#themeColor input[title=' + localStorage.themeColor + ']').attr('checked', true);
 
+		$('#filterKeywords').val(localStorage['filterKeywords']);
+		$('#highlightKeywords').val(localStorage['highlightKeywords']);
+
 		var notificationTimeoutSlider = document.getElementById('notificationTimeout');
 		notificationTimeoutSlider.value = localStorage.notificationTimeout;
 		onNotificationTimeoutChanged();
@@ -114,6 +117,14 @@ kindling.module(function () {
 			$('.description').click(onToggle);
 
 			$('#notificationTimeout').change(onNotificationTimeoutChanged);
+
+			$('#filterKeywords').change(function() {
+				saveOption('filterKeywords', $(this).val());
+			});
+
+			$('#highlightKeywords').change(function() {
+				saveOption('highlightKeywords', $(this).val());
+			});
 
 			$('#themeColor').change(onThemeColorChanged);
 
